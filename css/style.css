@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#main{
+    font-size: 18px;
+    margin: 50px auto;
+    background:#ccc;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #bbbbc1;
+    -webkit-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .3);
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .3); 
+}
+.screen-start{
+/*    display: none;*/
+    padding-top: 150px;
+    background:#0088CC;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+}
+.screen-finish{
+    display: none;
+    padding-top: 150px;
+    background:#46a546;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+}
+#info{
+    padding:10px;
+    font-size: 14px;
+    padding-bottom: 10px;
+    background: #0088CC;
+    color: #fff;
+    -webkit-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .2);
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .2);
+}
+#time{
+    float: right;
+}
+#qus{
+    margin: 0 20px;
+    padding-top: 20px;
+    height: 80px;
+    color: #333;
+    border-bottom: 1px solid #bbbbc1;
+}
+#ans{
+    margin: 0 20px;
+    padding:10px 0;
+    min-height: 250px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #bbbbc1;
+}
+/*------------ Answer formatting --------*/
+#ans .radioList{
+    list-style: none;
+    margin: 0;
+}
+#ans .radioList li{
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+#nav{
+    margin: 0 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff;
+}
+button#prev-btn{
+    float: right;
+}
+button#next-btn{
+    float: right;
+    margin-left: 10px;
+}
+#fin-btn{
+    display: none;
+}
+#result{
+    padding: 10px;
+    height: 96%;
+    font-size: 14px;
+    overflow: auto;
+}
+#result li{
+    padding: 3px 0;
+    margin-left: 20px;
+}
+#result ol ol li{
+    list-style-type: lower-alpha;
+}
+#result ol li span.cross{
+    font-size: 18px;
+    color: red;
+}
+#result ol li span.check{
+    font-size: 18px;
+    color: green;
+}
+footer{
+    text-align: center;
+}
