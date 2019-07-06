@@ -51,19 +51,26 @@ var browser={
       if (browser.versions.ios) {
         doLocation('http://itunes.apple.com/cn/app/id1468642894?mt=8');
       } else if (browser.versions.android) {
-        doLocation('https://play.google.com/store/apps/details?id=com.mengtnt.video_extract');
+        var lan = navigator.language;
+        if (lan != " zh-cn " ){
+          doLocation('https://play.google.com/store/apps/details?id=com.mengtnt.video_extract');
+        } else {
+          doLocation('/high_light.apk');
+        }
       }
     }
     </script>
 
     <a href="http://itunes.apple.com/cn/app/id1468642894?mt=8">
-      ios下载链接
+      Appstore下载链接
     </a>
     </br>
-    </br>
-    </br>
     <a href="https://play.google.com/store/apps/details?id=com.mengtnt.video_extract">
-      android下载链接
+      Google paly下载链接
+    </a>
+    </br>
+    <a href="/high_light.apk">
+      apk下载链接
     </a>
 
 </body>
