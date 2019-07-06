@@ -1,78 +1,162 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<script type="text/javascript">
-function doLocation(url)
-{
-  var a = document.createElement("a");
-  if(!a.click) {
-    window.location = url;
-    return;
-  }
-  a.setAttribute("href", url);
-  a.style.display = "none";
-  document.body.appendChild(a);
-  a.click();
-}
-
-//判断访问终端
-var browser={
-    versions:function(){
-        var u = navigator.userAgent, app = navigator.appVersion;
-        return {
-            trident: u.indexOf('Trident') > -1, //IE内核
-            presto: u.indexOf('Presto') > -1, //opera内核
-            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
-            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-            android: u.indexOf('Android') > -1 || u.indexOf('Adr') > -1, //android终端
-            iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
-            iPad: u.indexOf('iPad') > -1, //是否iPad
-            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
-            weixin: u.indexOf('MicroMessenger') > -1, //是否微信 （2015-01-22新增）
-            qq: u.match(/\sQQ/i) == " qq" //是否QQ
-        };
-    }(),
-    language:(navigator.browserLanguage || navigator.language).toLowerCase()
-}
-
-</script>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset=utf8" />
-<title>HighLight</title></head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:description" content="出彩 App 可以帮你快速从视频、Live Photos、或者 GIF 动图里导出高清照片">
+<meta property="og:image" content="/highlight/img/favicon.png">
+
+<title>HighLight</title>
+
+<link rel="stylesheet" href="/highlight/css/bootstrap.min.css">
+<link rel="stylesheet" href="/highlight/css/font-awesome.min.css">
+<link rel="stylesheet" href="/highlight/css/owl.carousel.css">
+<link rel="stylesheet" href="/highlight/css/owl.theme.css">
+<link rel="stylesheet" href="/highlight/css/nivo-lightbox/nivo-lightbox.css">
+<link rel="stylesheet" href="/highlight/css/nivo-lightbox/nivo-lightbox-theme.css">
+<link rel="stylesheet" href="/highlight/css/animate.css">
+<link rel="stylesheet" href="/highlight/css/style.css">
+<script src="/highlight/js/script.js" type="text/javascript"></script>
+
+
+<script src="/highlight/js/modernizr.custom.js"></script>
+
+</head>
 
 <body>
 
-    <script type="text/javascript">
-    if(browser.versions.mobile){
-      if (browser.versions.ios) {
-        doLocation('http://itunes.apple.com/cn/app/id1468642894?mt=8');
-      } else if (browser.versions.android) {
-        var lan = navigator.language;
-        if (lan != " zh-cn " ){
-          doLocation('https://play.google.com/store/apps/details?id=com.mengtnt.video_extract');
-        } else {
-          doLocation('/HighLight/high_light.apk');
-        }
-      }
-    }
-    </script>
+<script type="text/javascript">
+	if(browser.versions.mobile){
+		if (browser.versions.ios) {
+		doLocation('http://itunes.apple.com/cn/app/id1468642894?mt=8');
+		} else if (browser.versions.android) {
+		var lan = navigator.language;
+		if (lan != "zh-cn" ){
+			doLocation('https://play.google.com/store/apps/details?id=com.mengtnt.video_extract');
+		} else {
+			doLocation('/HighLight/high_light.apk');
+		}
+		}
+	}
+	</script>
 
-    <a href="http://itunes.apple.com/cn/app/id1468642894?mt=8">
-      Appstore下载链接
-    </a>
-    </br>
-    <a href="https://play.google.com/store/apps/details?id=com.mengtnt.video_extract">
-      Google paly下载链接
-    </a>
-    </br>
-    <a href="/HighLight/high_light.apk">
-      apk下载链接
-    </a>
+<a href="#header" id="back-to-top" class="top"><i class="fa fa-chevron-up"></i></a>
+<section id="header" class="header">
+	<div class="top-bar">
+		<div class="container">
+			<div class="navigation" id="navigation-scroll">
+					<div class="row">
+						<div class="col-md-11 col-xs-10">
+						<a href="/highlight/index.html">
+							<span id="logo"><strong class="strong">H</strong>ighLight</span>
+							<!-- <img src="/highlight/img/favicon.png"> -->
+						</a>
+						</div>
+						<!-- <div><img src="/highlight/img/favicon.png" width="50" height="50"></div> -->
+					</div><!-- /.row -->
+				</div><!-- /.navigation -->
+			</div><!--/.container-->
+		</div><!--/.top-bar-->
 
+	<div class="container">
+		<div class="starting">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="/highlight/img/LUCY2.png" alt="HighLight" class="wow flipInY animated animated">
+				</div>
+				<div class="col-md-6">
+					<div class="banner-text">
+						<p>出彩 App 可以帮你快速从视频、Live Photos、或者 GIF 动图里导出高清照片，从此你可以轻松的拍摄那些快速移动的物体和人，特别适合自拍一段视频后慢慢选择最佳的照片进行导出，导出后的照片跟你拍摄的视频一样高清，这样基本可以告别以前通过暂停视频全屏截图的方式来保留你的高光时刻了。
+							出彩功能如下：
+						</p>
+						<br/>* 支持从视频、Live Photos、GIF 动图导出高清照片</a>
+						<br/>* 快速滑动进度条定位最好看的一帧，也可以通过前后一帧一帧微调找到最佳的照片</a>
+						<br/>* 支持一次同时最多导出 5 张照片</a>
+						<br/>* 对于那些横竖不准确的视频，你也可以快速旋转视频恢复到初始状态</a>
+						<br/>* 直接保存到你的本地相册</a>
+						<br/>出彩是个简单的 App, 就不写太长了，如果你遇到其他问题或者功能意见，可以直接发邮件给我们: openallen@gmail.com</a>
+						<br/>
+						<br/>
+						<br/>
+						<a href="https://play.google.com/store/apps/details?id=com.mengtnt.video_extract" class="btn btn-download wow animated fadeInLeft">
+						<i class="fa fa-android pull-left"></i>
+						<strong>Get it on</strong>
+						<br/>Google Play </a>
+						<a href="http://itunes.apple.com/cn/app/id1468642894?mt=8" class="btn btn-download wow animated fadeInRight">
+						<i class="fa fa-apple pull-left"></i>
+						<strong>Get it on</strong>
+						<br/>App store </a>
+						<!-- <br/>
+						<a href="/HighLight/high_light.apk" class="btn btn-download wow animated fadeInLeft">
+						<i class="fa fa-android pull-left"></i>
+						<strong>Get it on</strong>
+						<br/>apk下载 </a>   -->
+					</div> <!-- /.banner-text -->
+				</div>
+			</div>
+		</div>
+		<!-- /.starting -->
+	</div>
+	<!-- /.container -->
+</section>
+</div>
+<script src="/highlight/js/jquery-1.11.2.min.js"></script>
+<script src="/highlight/js/wow.min.js"></script>
+<script src="/highlight/js/owl-carousel.js"></script>
+<script src="/highlight/js/nivo-lightbox.min.js"></script>
+<script src="/highlight/js/smoothscroll.js"></script>
+<script src="/highlight/js/bootstrap.min.js"></script>
+<script src="/highlight/js/classie.js"></script>
+<script src="/highlight/js/script.js"></script>
+<script>
+	new WOW().init();
+</script>
+<script>
+	$(document).ready(function(){
+		$(".hideit").click(function(){
+			$(".overlay").hide();
+		});
+		$("#trigger-overlay").click(function(){
+			$(".overlay").show();
+		});
+	});
+</script>
+<script>
+	$(document).ready(function(){
+
+	  var kawa = $('.top-bar');
+	  var back = $('#back-to-top');
+	  function scroll() {
+		 if ($(window).scrollTop() > 700) {
+			kawa.addClass('fixed');
+			back.addClass('show-top');
+
+		 } else {
+			kawa.removeClass('fixed');
+			back.removeClass('show-top');
+		 }
+	  }
+
+	  document.onscroll = scroll;
+	});
+</script>
+<script>
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		  var target = $(this.hash);
+		  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		  if (target.length) {
+			$('html,body').animate({
+			  scrollTop: target.offset().top
+			}, 1000);
+			return false;
+		  }
+		}
+	  });
+	});
+</script>
 </body>
-
 </html>
