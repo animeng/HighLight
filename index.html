@@ -18,10 +18,10 @@
         doLocation('http://itunes.apple.com/cn/app/id1468642894?mt=8');
       } else if (browser.versions.android) {
         var lan = navigator.language;
-        if (lan != "zh-cn" ){
-          doLocation('https://play.google.com/store/apps/details?id=com.mengtnt.video_extract');
+        if (lan == "zh-CN" ){
+          doLocation('/highlight/resource/high_light.apk');
         } else {
-          doLocation('/HighLight/high_light.apk');
+          doLocation('https://play.google.com/store/apps/details?id=com.mengtnt.video_extract');
         }
       }
     }
