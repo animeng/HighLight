@@ -18,9 +18,7 @@
         doLocation('http://itunes.apple.com/cn/app/id1468642894?mt=8');
       } else if (browser.versions.android) {
         var lan = navigator.language;
-        if (lan == "zh-CN" ){
-          doLocation('/highlight/resource/high_light.apk');
-        } else {
+        if (lan != "zh-CN" ){
           doLocation('https://play.google.com/store/apps/details?id=com.mengtnt.video_extract');
         }
       }
@@ -47,7 +45,7 @@
     <img src="/highlight/img/googlePlay.png" > 
   </a>
   </br>
-  <a href="/highlight/resource/high_light.apk">
+  <a href="http://animeng.cn/highlight/resource/high_light.apk">
     <img src="/highlight/img/androidDownload.png"> 
   </a>
 
