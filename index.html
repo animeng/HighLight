@@ -7,6 +7,7 @@
 <meta property="og:image" content="/highlight/img/appIcon.png">
 <link rel="stylesheet" href="/highlight/css/style.css">
 <script src="/highlight/js/script.js" type="text/javascript"></script>
+<script src="https://g.alicdn.com/dingding/dingtalk-jsapi/3.0.36/dingtalk.open.js"></script>
 <title>Highlight App</title>
 </head>
 
@@ -23,6 +24,20 @@
         }
       }
     }
+        function testCasestartAutomatorSession() {
+
+            dd.ready(() => {
+                dd.getThirdAppUserCustomData({
+                    test: 'test',
+                    onSuccess: function (data) {
+                        console.log('succ ' + JSON.stringify(data));
+                    },
+                    onFail: function (err) { 
+                        console.log('error' + JSON.stringify(err));
+                    }
+                });
+            });
+        }
     </script>
 
   <div class="logo">
@@ -48,6 +63,10 @@
   <a href="http://animeng.cn/highlight/resource/high_light.apk">
     <img src="/highlight/img/androidDownload.png"> 
   </a>
+
+    <div class="button-container">
+        <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded button" onclick="testCasestartAutomatorSession()">测试 worker-render Case</button>
+    </div>
 
 </body>
 
